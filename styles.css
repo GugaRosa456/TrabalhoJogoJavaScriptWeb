@@ -1,0 +1,64 @@
+body{
+  overflow: hidden;
+}
+.imgfundo{
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("travefutebol.png");
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.boxUpgrade{
+  position: absolute;
+  left: 1650px;
+  width: 275px;
+  height: 945px;
+  background-color:  #1E3A5F;;
+ 
+}
+ul{
+  position: absolute;
+color: white;
+ font-family: Arial, Helvetica, sans-serif;
+font-weight: 350px;
+}
+.jogador{
+    width: 250px;
+    height: 70px;
+    background-color: #2D4A73;
+    margin: 10px;
+    padding: 5px;
+}
+
+.jogador img{
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-right: 10px;
+}
+
+.nome{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.cliques{
+    color: gold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.bolanocampo {
+    position: absolute;
+    top: 700px;
+    left: 935px;
+    width: 50px; 
+    height: 50px;
+}
+.bolanocampo img {
+    width: 100%;
+    height: 100%;
+}
