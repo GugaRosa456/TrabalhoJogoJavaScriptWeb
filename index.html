@@ -7,77 +7,82 @@
     <title>JogoClique</title>
 </head>
 <body>
-    <div class="imgfundo">
+ <div class="imgfundo">
         <ul class="ul">
-         <li>PONTOS: 0</li>
-         <li>VALOR DO CLIQUE: 1</li>
-         <li>UPGRADES: 0</li>
+            <li id="Pontos">PONTOS: 0</li>
+            <li id="ValorClique">VALOR DO CLIQUE: 1</li>
+            <li id="Upgrades">UPGRADES: 0</li>
         </ul>
-         <div class="bolanocampo">
-        <img src="bola.png" alt="Bola de Futebol">
-    </div>
+
+        <div id="bola" class="bolanocampo">
+            <img src="Bola.png" alt="Bola de Futebol">
+        </div>
+
         <div class="boxUpgrade">
-<!-- jogador1 -->
- <div class="jogador">
-            <img src="mauro.webp">
-           <div class="nome">Mauro shampoo</div>
-        <div class="cliques">+0.4 cliques/s</div>
- </div>
-<!-- jogador2 -->
-  <div class="jogador">
-  <img src="Raphinha.webp">
-           <div class="nome">Raphinha</div>
-        <div class="cliques">+1 cliques/s</div>
+            <div class="jogador" data-preco="2" data-clique="0.4" onclick="comprarUpgrade(this)">
+                <img src="mauro.webp">
+                <div class="nome">Mauro shampoo</div>
+                <div class="cliques">+0.4 cliques/s</div>
+                <div class="preco">Preço: 2 pontos</div>
+            </div>
+            <div class="jogador" data-preco="10" data-clique="1" onclick="comprarUpgrade(this)">
+                <img src="Raphinha.webp">
+                <div class="nome">Raphinha</div>
+                <div class="cliques">+1 clique/s</div>
+                <div class="preco">Preço: 10 pontos</div>
+            </div>
+            <div class="jogador" data-preco="20" data-clique="2" onclick="comprarUpgrade(this)">
+                <img src="Endrick.webp">
+                <div class="nome">Endrick</div>
+                <div class="cliques">+2 cliques/s</div>
+                <div class="preco">Preço: 20 pontos</div>
+            </div>
+            <div class="jogador" data-preco="30" data-clique="3" onclick="comprarUpgrade(this)">
+                <img src="vini jr.webp">
+                <div class="nome">Vini Jr.</div>
+                <div class="cliques">+3 cliques/s</div>
+                <div class="preco">Preço: 30 pontos</div>
+            </div>
+            <div class="jogador" data-preco="40" data-clique="4" onclick="comprarUpgrade(this)">
+                <img src="Neymar.webp">
+                <div class="nome">Neymar</div>
+                <div class="cliques">+4 cliques/s</div>
+                <div class="preco">Preço: 40 pontos</div>
+            </div>
+            <div class="jogador" data-preco="50" data-clique="5" onclick="comprarUpgrade(this)">
+                <img src="Kaká.webp">
+                <div class="nome">Kaká</div>
+                <div class="cliques">+5 cliques/s</div>
+                <div class="preco">Preço: 50 pontos</div>
+            </div>
+            <div class="jogador" data-preco="60" data-clique="6" onclick="comprarUpgrade(this)">
+                <img src="Roberto Carlos.webp">
+                <div class="nome">Roberto Carlos</div>
+                <div class="cliques">+6 cliques/s</div>
+                <div class="preco">Preço: 60 pontos</div>
+            </div>
+            <div class="jogador" data-preco="70" data-clique="7" onclick="comprarUpgrade(this)">
+                <img src="Ronaldo.webp">
+                <div class="nome">Ronaldo Fenômeno</div>
+                <div class="cliques">+7 cliques/s</div>
+                <div class="preco">Preço: 70 pontos</div>
+            </div>
+            <div class="jogador" data-preco="80" data-clique="8" onclick="comprarUpgrade(this)">
+                <img src="Ronaldinho Gaúcho.webp">
+                <div class="nome">Ronaldinho Gaúcho</div>
+                <div class="cliques">+8 cliques/s</div>
+                <div class="preco">Preço: 80 pontos</div>
+            </div>
+            <div class="jogador" data-preco="90" data-clique="9" onclick="comprarUpgrade(this)">
+                <img src="pele.webp">
+                <div class="nome">Pele</div>
+                <div class="cliques">+9 cliques/s</div>
+                <div class="preco">Preço: 90 pontos</div>
+            </div>
         </div>
-<!-- jogador3 -->
- <div class="jogador">
-    <img src="Endrick.webp">
-             <div class="nome">Endrick</div>
-            <div class="cliques">+2 cliques/s</div>
- </div>
-<!-- jogador4 -->
-  <div class="jogador">
-    <img src="vini jr.webp">
-             <div class="nome">Vini Jr.</div>
-            <div class="cliques">+3 cliques/s</div>
-            </div>
-<!-- jogador5 -->
-  <div class="jogador">
-    <img src="Neymar.webp">
-             <div class="nome">Neymar</div>
-            <div class="cliques">+4 cliques/s</div>
-            </div>
-<!-- jogador6 -->
-    <div class="jogador">
-    <img src="Kaká.webp">
-             <div class="nome">Kaká</div>
-            <div class="cliques">+5 cliques/s</div>
-            </div>
-<!-- jogador7 -->
-    <div class="jogador">
-    <img src="Roberto Carlos.webp">
-             <div class="nome">Roberto Carlos</div>
-            <div class="cliques">+6 cliques/s</div>
-            </div>
-<!-- jogador8 -->
-    <div class="jogador">
- <img src="Ronaldo.webp">
-           <div class="nome">Ronaldo Fenômeno</div>
-        <div class="cliques">+7 cliques/s</div>
-        </div>
-<!-- jogador9 -->
-  <div class="jogador">
-  <img src="Ronaldinho Gaúcho.webp">
-           <div class="nome">Ronaldinho Gaúcho</div>
-        <div class="cliques">+8 cliques/s</div>
- </div>
-<!-- jogador10 -->
-  <div class="jogador">
-  <img src="pele.webp">
-           <div class="nome">Pele</div>
-        <div class="cliques">+9 cliques/s</div>
-</div>
     </div>
+
+    <script src="script.js"></script>
     
 </body>
 </html>

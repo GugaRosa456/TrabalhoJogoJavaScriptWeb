@@ -54,11 +54,36 @@ font-weight: 350px;
 .bolanocampo {
     position: absolute;
     top: 700px;
-    left: 935px;
-    width: 50px; 
-    height: 50px;
+    left: 900px;
+    width: 150px; 
+    height: 150px;
 }
 .bolanocampo img {
     width: 100%;
     height: 100%;
+}
+.preco{
+    color: lightgreen;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.chutar {
+    animation: irParaOGol 0.5s ease-in-out forwards;
+}
+
+@keyframes irParaOGol {
+    0% { 
+        top: 700px; 
+        left: 900px; 
+        transform: scale(1); 
+    }
+    100% { 
+        top: 450px; 
+        left: 900px; 
+        transform: scale(0.4); 
+    }
+}
+.comprado {
+    opacity: 0.3;
+    pointer-events: none;
 }
