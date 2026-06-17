@@ -3,9 +3,9 @@ let valorDoClique = 1;
 let totalUpgrades = 0;
 let jogoFinalizado = false;
 
-const txtPontos = document.getElementById("Pontos");
-const txtValorClique = document.getElementById("ValorClique");
-const txtUpgrades = document.getElementById("Upgrades");
+const Pontos = document.getElementById("Pontos");
+const ValorClique = document.getElementById("ValorClique");
+const Upgrades = document.getElementById("Upgrades");
 const bola = document.getElementById("bola");
 
 bola.addEventListener("click", () => {
@@ -16,20 +16,24 @@ bola.addEventListener("click", () => {
     Pontos.innerText = "PONTOS: " + pontos.toFixed(1);
     
     bola.classList.add("chutar");
+    
+bola.addEventListener("animationend", () => {
+    bola.classList.remove("chutar");
+});
 
     if (pontos >= 500) {
         jogoFinalizado = true;
         alert("Parabéns! Você alcançou 500 pontos e ganhou o jogo!");
-            bola.classList.remove("chutar");
+
     }
 });
 
-function comprarUpgrade(elementoJogador) {
+function comprarUpgrade(elementoJogador, preco, bonusClique) {
     if (jogoFinalizado) 
         return;
 
-    let preco = parseFloat(elementoJogador.getAttribute("data-preco"));
-    let bonusClique = parseFloat(elementoJogador.getAttribute("data-clique"));
+    preco = parseFloat(preco);
+    bonusClique = parseFloat(bonusClique);
 
     if (pontos >= preco) {
         pontos = pontos - preco;
