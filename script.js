@@ -12,18 +12,15 @@ bola.addEventListener("click", () => {
     if (jogoFinalizado) 
         return;
 
-    pontos += valorDoClique;
-    txtPontos.innerText = "PONTOS: " + pontos.toFixed(1);
-
+    pontos = pontos + valorDoClique;
+    Pontos.innerText = "PONTOS: " + pontos.toFixed(1);
+    
     bola.classList.add("chutar");
-
-    setTimeout(() => {
-        bola.classList.remove("chutar");
-    }, 500);
 
     if (pontos >= 500) {
         jogoFinalizado = true;
         alert("Parabéns! Você alcançou 500 pontos e ganhou o jogo!");
+            bola.classList.remove("chutar");
     }
 });
 
@@ -35,15 +32,15 @@ function comprarUpgrade(elementoJogador) {
     let bonusClique = parseFloat(elementoJogador.getAttribute("data-clique"));
 
     if (pontos >= preco) {
-        pontos -= preco;
+        pontos = pontos - preco;
         
         if (bonusClique === 0.4) {
-            valorDoClique += 0.4;
+            valorDoClique = valorDoClique + 0.4;
         } else {
-            valorDoClique += 1;
+            valorDoClique = valorDoClique + 1;
         }
 
-        totalUpgrades += 1;
+        totalUpgrades = totalUpgrades + 1;
 
       
         Pontos.innerText = "PONTOS: " + pontos.toFixed(1);
