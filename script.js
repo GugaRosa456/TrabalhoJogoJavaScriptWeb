@@ -3,6 +3,11 @@ let valorDoClique = 1;
 let totalUpgrades = 0;
 let jogoFinalizado = false;
 
+const Pontos = document.getElementById("Pontos");
+const ValorClique = document.getElementById("ValorClique");
+const Upgrades = document.getElementById("Upgrades");
+const bola = document.getElementById("bola");
+
 bola.addEventListener("click", () => {
     if (jogoFinalizado) return;
 
@@ -12,7 +17,7 @@ bola.addEventListener("click", () => {
 
     if (pontos >= 500) {
         jogoFinalizado = true;
-        alert("Parabéns! Você alcançou 500 pontos e ganhou o jogo!");
+        alert("Parabéns,Você alcançou 500 pontos e ganhou o jogo!");
     }
 
 });
